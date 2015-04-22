@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CYBlood</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_1_text">You Clicked</string>
+
+    <string-array name="Pages">
+        <item>Select</item>
+        <item>Home</item>
+        <item>Donate</item>
+        <item>Volunteer</item>
+        <item>Contact Us</item>
+        <item>Get More Info</item>
+    </string-array>
+    <string-array name="Days">
+        <item>Monday (3/23)</item>
+        <item>Tuesday (3/24)</item>
+        <item>Wednesday (3/25)</item>
+        <item>Thursday (3/26)</item>
+    </string-array>
+    <string-array name="Times">
+        <item>10:00 a.m.</item>
+        <item>10:15 a.m.</item>
+        <item>10:30 a.m.</item>
+        <item>10:45 a.m.</item>
+        <item>11:00 a.m.</item>
+        <item>11:15 a.m.</item>
+        <item>11:30 a.m.</item>
+        <item>11:45 a.m.</item>
+        <item>12:00 p.m.</item>
+        <item>12:15 p.m.</item>
+        <item>12:30 p.m.</item>
+        <item>12:45 p.m.</item>
+        <item>1:00 p.m.</item>
+        <item>1:15 p.m.</item>
+        <item>1:30 p.m.</item>
+        <item>1:45 p.m.</item>
+        <item>2:00 p.m.</item>
+        <item>2:15 p.m.</item>
+        <item>2:30 p.m.</item>
+        <item>2:45 p.m.</item>
+        <item>3:00 p.m.</item>
+        <item>3:15 p.m.</item>
+        <item>3:30 p.m.</item>
+        <item>3:45 p.m.</item>
+        <item>4:00 p.m.</item>
+        <item>4:15 p.m.</item>
+        <item>4:30 p.m.</item>
+        <item>4:45 p.m.</item>
+        <item>5:00 p.m.</item>
+        <item>5:15 p.m.</item>
+        <item>5:30 p.m.</item>
+        <item>5:45 p.m.</item>
+    </string-array>
+
+    <string name="title_activity_donors">Donors</string>
+    <string name="title_activity_volunteer">Volunteer</string>
+    <string name="title_activity_contact_us">ContactUs</string>
+    <string name="title_activity_learn_more">LearnMore</string>
+    <string name="title_activity_donor_submit">DonorSubmit</string>
+    <string name="title_activity_volunteer_submit">VolunteerSubmit</string>
+
+</resources>
