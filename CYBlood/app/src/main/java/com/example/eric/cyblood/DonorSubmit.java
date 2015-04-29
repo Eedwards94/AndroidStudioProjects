@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.ServerSocket;
 import java.net.UnknownHostException;
@@ -18,6 +21,8 @@ import java.net.UnknownHostException;
 
 public class DonorSubmit extends ActionBarActivity {
 
+    TextView date2;
+    TextView time2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +31,8 @@ public class DonorSubmit extends ActionBarActivity {
 
         Intent intent = getIntent();
 
-        TextView date2 = (TextView) findViewById(R.id.Date2);
-        TextView time2 = (TextView) findViewById(R.id.Time2);
+        date2 = (TextView) findViewById(R.id.Date2);
+        time2 = (TextView) findViewById(R.id.Time2);
         //Get the bundle
         Bundle bundle = intent.getExtras();
 
@@ -44,29 +49,25 @@ public class DonorSubmit extends ActionBarActivity {
         finalSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ServerSocket serverSocket = null;
-                try {
-                    serverSocket = new ServerSocket(8000);
 
-                } catch (IOException e) {
-                    System.out.println("Could not listen on port: 4001");
-                    System.out.println(e.getMessage());
-
-                    System.exit(-1);
-                }
-
-                while (true) {
-
-                    Socket clientSocket = null;
-                    try {
-                        clientSocket = serverSocket.accept();
-                        finalSubmit.setTextColor(Color.RED);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                new Thread() {
+                    @Override
+                    public void run() {
+                        Socket clientSocket = null;
+                        try {
+                            clientSocket = new Socket("10.26.48.33", 8000);
+                            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                            BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                            out.println(messageToSocket());
+                            out.flush();
+                            br.readLine();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            clientSocket.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
-                }
-
+                }.start();
             }
         });
 
@@ -79,6 +80,26 @@ public class DonorSubmit extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_donor_submit, menu);
         return true;
+    }
+
+    public String messageToSocket(){
+        String toSocket = "insertData;DonorInfo;";
+        String date = date2.getText().toString();
+        String time = time2.getText().toString();
+
+        if(time.contains("p.m.")){
+            time = time.substring(0,4);
+        }
+        if(time.contains("a.m.")){
+            time = time.substring(0,5);
+        }
+        TextView emailText = (TextView) findViewById(R.id.editText2);
+
+        String email = emailText.getText().toString();
+        //"insertData;DonorInfo;'erice1@iastate.edu','2015-03-24 11:00:00';' ';' '"
+        toSocket = toSocket + "'" + email + "','" + date + " " + time + ":00';' ';' '";
+
+        return toSocket;
     }
 
     @Override

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.eric.cyblood" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -39,6 +41,22 @@
         <activity
             android:name=".VolunteerSubmit"
             android:label="@string/title_activity_volunteer_submit" >
+        </activity>
+        <activity
+            android:name=".Committees"
+            android:label="@string/title_activity_committees" >
+        </activity>
+        <activity
+            android:name=".Partners"
+            android:label="@string/title_activity_partners" >
+        </activity>
+        <activity
+            android:name=".GreekRules"
+            android:label="@string/title_activity_greek_rules" >
+        </activity>
+        <activity
+            android:name=".HowToGetInvolved"
+            android:label="@string/title_activity_how_to_get_involved" >
         </activity>
     </application>
 

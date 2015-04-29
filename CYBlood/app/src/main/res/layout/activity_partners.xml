@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.eric.cyblood.Partners"
+    android:background="#FFD700">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/partners"
+        android:id="@+id/partners" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="American Red Cross Biomedical Services plays a critical role in our nation’s health care system. It is the largest single supplier of blood and blood products in the United States, collecting and processing approximately 40 percent of the blood supply and distributing it to about 2,600 hospitals and transfusion centers nationwide. Providing life-saving blood and blood products to patients is a key component of the Red Cross mission to help people in times of emergency and disasters.  "
+        android:id="@+id/ARC"
+        android:textColor="#FFD700"
+        android:layout_below="@+id/partners"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="As one of the 15 largest blood centers in the country, LifeServe Blood Center provides blood and blood products to more than 100 hospitals located across Iowa, Nebraska and South Dakota. LifeServe Blood Center is committed to providing premier service to volunteer blood donors and access to a safe, quality blood supply for hospitals and patients."
+        android:id="@+id/LS"
+        android:textColor="#FFD700"
+        android:layout_below="@+id/partners"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The Mississippi Valley Regional Blood Center (MVRBC) is the exclusive provider of blood products and services to 88 hospitals in Illinois,   Iowa, Missouri and Wisconsin. The Blood Center is based in Davenport, Iowa, where MVRBC’s testing, processing and primary distribution   center handles more than 250,000 units of blood components each year. MVRBC is a not-for-profit 501(c)(3) organization.  "
+        android:id="@+id/MVRBC"
+        android:textColor="#FFD700"
+        android:layout_below="@+id/partners"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

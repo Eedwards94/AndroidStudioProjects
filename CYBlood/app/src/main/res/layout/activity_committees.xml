@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.eric.cyblood.Committees"
+    android:background="#FFD700">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please choose a committee to learn more about!"
+        android:id="@+id/textView5"
+        android:textColor="#CC2233"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Committees"
+        android:entries="@array/committees"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The academic committee focuses on gaining involvement from students and faculty by means of the classroom.  They are in charge of getting in contact with department heads and faculty to inform them of the upcoming drive.  Our goal is that teachers will advertise the drive during their classes, and or even offer extra credit to their students for participating in the drive.  Meeting with and sending emails to faculty, as well as organizing an academic binder to record students who are receiving extra credit are main focuses of the committee."
+        android:id="@+id/Academics"
+        android:textColor="#FFD700"
+        android:layout_below="@+id/Committees"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The design committee is in charge of the overall promotion of the drive as well as smaller design related tasks related to the drive.  Designing the posters, flyers, and banners to promote the drive is one of their main focuses.  This committee also works on the design of the t-shirts and name tags required for each drive.  Having basic design knowledge as well as being knowledgeable with design related computer programs such as Adobe Photoshop, InDesign, and Illustrator are very important."
+        android:id="@+id/Design"
+        android:textColor="#FFD700"
+        android:layout_below="@+id/Committees"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The fundraising committee is a small committee that is in charge of raising funds for the Blood Drive.  The money is raised in order to keep member dues down, and to help pay for committee expenses.  This committee is in charge of organizing fundraising events in order for the drive to run smoothly every semester."
+        android:id="@+id/Fundraising"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@+id/Academics"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Informing the ISU Greek community as well as the surrounding Ames community are the main tasks of the off campus recruitment committee.  Distributing promotional materials provided by the design committee to the surrounding Ames community as well as informing the Greek community of upcoming drives, homecoming/greek week rules, and organizing dinner announcements are more specifically what is required of this committee.  Being knowledgeable about rules related to the Greek community and having good organization skills are key."
+        android:id="@+id/OffCampus"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@+id/Academics"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The On Campus Recruitment Committee consists of 2 executive members and 10 committee members. The main duties of this committee are to work hand in hand with the Hall Directors and Community Advisors of each Residence Hall to educate and advertise the Blood Drive. This committee is also responsible for designing incentive programs to encourage those living in campus housing to participate in the blood drive through donation and/or volunteering."
+        android:id="@+id/OnCampus"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@+id/Academics"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The members of the public relations committee are in charge of gaining advertising for the drive.  Contacting local newspapers, such as the Iowa State Daily and The Sun, as well as gaining advertising through television and radio media are a few of their main focuses.  The PR committee is also in charge of recruiting celebrities and ISU athletes to participate in the drive.  Sending out public service announcements, as well as finding exciting ways to advertise the drive to the surrounding community are main focuses of the committee."
+        android:id="@+id/PublicRelations"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@+id/Academics"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Every drive, we rely on contributions from dozens of companies in order for the drive to run smoothly.   Donations range from gift cards to monetary donations.  The sponsorship committee is in charge of contacting local companies to gain donations for the upcoming drive.  Being very organized and having good communication skills is key for this committee"
+        android:id="@+id/Sponsorship"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@+id/Academics"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Obtaining and organizing the 750 volunteers needed every Blood Drive is the main goal of the volunteer committee.  They are in charge of setting up the online volunteer sign up website and sending out emails to the ISU student body to inform them of the volunteer opportunities related to the drive.  They are also in charge of organizing the volunteer sign in/out process and task delegation the week of the drive.  Being apart of the volunteer committee requires minimal preparation for the drive but requires a lot of time the week of the drive."
+        android:id="@+id/Volunteer"
+        android:textColor="#FFD700"
+        android:layout_alignTop="@+id/Academics"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

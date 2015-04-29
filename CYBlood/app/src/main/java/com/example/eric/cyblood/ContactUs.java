@@ -1,5 +1,6 @@
 package com.example.eric.cyblood;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -7,17 +8,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import org.w3c.dom.Text;
 
 public class ContactUs extends ActionBarActivity {
-
+    TextView email;
+    TextView subject;
+    TextView name;
+    TextView text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
         Spinner tabs = (Spinner) findViewById(R.id.tabs);
+        Button contact = (Button) findViewById(R.id.contactButton);
 
         tabs.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -32,7 +41,30 @@ public class ContactUs extends ActionBarActivity {
 
             }
         });
+
+        contact.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+
+        email = (TextView) findViewById(R.id.emailOfSender);
+        subject = (TextView) findViewById(R.id.subject);
+        text = (TextView) findViewById(R.id.message);
+        name = (TextView) findViewById(R.id.sender);
+
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType(("text/plain"));
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"erice1@iastate.edu"});
+        i.putExtra(Intent.EXTRA_SUBJECT, subject.getText().toString());
+        i.putExtra(Intent.EXTRA_TEXT, "From: " + name.getText().toString() + "\n(" + email.getText().toString() + ")"+ "\n\n" + text.getText().toString());
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (ActivityNotFoundException ex){
+            Toast.makeText(ContactUs.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+                                       }
+        });
     }
+
 
     public void handleSpinner(String selected){
         if(selected.equals("Select")){

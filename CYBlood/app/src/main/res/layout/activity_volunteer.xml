@@ -13,6 +13,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Please Select A Day &amp; Time To Volunteer"
         android:id="@+id/Volunteer"
+        android:textColor="#CC2233"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -39,8 +40,9 @@
         android:entries="@array/Days"
         android:scrollbarSize="40dp"
         android:spinnerMode="dropdown"
-        android:layout_above="@+id/VolunteerTime"
-        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Volunteer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
         android:layout_alignParentEnd="true" />
 
     <Spinner
@@ -50,8 +52,7 @@
         android:entries="@array/Times"
         android:scrollbarSize="40dp"
         android:spinnerMode="dropdown"
-        android:layout_marginBottom="36dp"
-        android:layout_above="@+id/Submit2"
+        android:layout_below="@+id/VolunteerDay"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 

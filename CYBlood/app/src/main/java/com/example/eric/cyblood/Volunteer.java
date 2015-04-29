@@ -12,13 +12,15 @@ import android.widget.Spinner;
 
 
 public class Volunteer extends ActionBarActivity {
+
     String volunteerDay = null;
-    String volunteerTimeSelected = null;
+    String volunteerTime = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donors);
+
+        setContentView(R.layout.activity_volunteer);
         final Button submit = (Button) findViewById(R.id.Submit2);
         Spinner pages2 = (Spinner) findViewById(R.id.Pages2);
         Spinner date2 = (Spinner) findViewById(R.id.VolunteerDay);
@@ -41,7 +43,7 @@ public class Volunteer extends ActionBarActivity {
         time2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                volunteerTimeSelected = parent.getItemAtPosition(position).toString();
+                volunteerTime = parent.getItemAtPosition(position).toString();
             }
 
             @Override
@@ -72,14 +74,16 @@ public class Volunteer extends ActionBarActivity {
 //Add your data to bundle
                 if (volunteerDay != "" || volunteerDay != null)
                     bundle2.putString("VolunteerDate", volunteerDay);
-                if (volunteerTimeSelected != "" || volunteerTimeSelected != null)
-                    bundle2.putString("VolunteerTime", volunteerTimeSelected);
+                if (volunteerTime != "" || volunteerTime != null)
+                    bundle2.putString("VolunteerTime", volunteerTime);
 //Add the bundle to the intent
                 i2.putExtras(bundle2);
                 startActivity(i2);
             }
         });
     }
+
+
 
     public void handleSpinner(String selected){
         if(selected.equals("Select")){

@@ -15,10 +15,17 @@
         <item>Get More Info</item>
     </string-array>
     <string-array name="Days">
-        <item>Monday (3/23)</item>
-        <item>Tuesday (3/24)</item>
-        <item>Wednesday (3/25)</item>
-        <item>Thursday (3/26)</item>
+        <item>2015-03-23</item>
+        <item>2015-03-24</item>
+        <item>2015-03-25</item>
+        <item>2015-03-26</item>
+    </string-array>
+    <string-array name="Learn">
+        <item>Select</item>
+        <item>Committees</item>
+        <item>Partners</item>
+        <item>Greek Rules</item>
+        <item>How to get involved</item>
     </string-array>
     <string-array name="Times">
         <item>10:00 a.m.</item>
@@ -55,11 +62,38 @@
         <item>5:45 p.m.</item>
     </string-array>
 
+    <string-array name="committees">
+        <item>Select</item>
+        <item>Academics</item>
+        <item>Design</item>
+        <item>Fundraising</item>
+        <item>Off-Campus</item>
+        <item>On-Campus</item>
+        <item>Public Relations</item>
+        <item>Sponsorship</item>
+        <item>Volunteer</item>
+    </string-array>
+
+    <string-array name="partners">
+        <item>American Red Cross</item>
+        <item>Life Serve</item>
+        <item>Mississippi Valley Regional Blood Center</item>
+    </string-array>
+
+    <string-array name="Greek">
+        <item>Homecoming</item>
+        <item>Greek Week</item>
+    </string-array>
+
     <string name="title_activity_donors">Donors</string>
     <string name="title_activity_volunteer">Volunteer</string>
     <string name="title_activity_contact_us">ContactUs</string>
     <string name="title_activity_learn_more">LearnMore</string>
     <string name="title_activity_donor_submit">DonorSubmit</string>
     <string name="title_activity_volunteer_submit">VolunteerSubmit</string>
+    <string name="title_activity_committees">Committees</string>
+    <string name="title_activity_partners">Partners</string>
+    <string name="title_activity_greek_rules">GreekRules</string>
+    <string name="title_activity_how_to_get_involved">HowToGetInvolved</string>
 
 </resources>
